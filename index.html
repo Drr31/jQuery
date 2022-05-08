@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tp jquery</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.css" />
+
+	<script src="http://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+	<script>
+		$(document).ready(function(){
+			$( "body" ).on( "swiperight", allerAinfo );
+		});
+		function allerAinfo( event ){
+			$.mobile.changePage("#info");
+		}
+	</script>
+</head>
+
+<body>
+	<div data-role="panel" id="menugauche" data-position="left" data-display="reveal">
+		<a data-role="button" href="index.html" data-rel="close">Fermer</a>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor lorem in eros suscipit vehicula. Praesent at lacus magna. Donec bibendum accumsan maximus. Donec quis sem sit amet dolor mattis dapibus vitae vel ipsum.</p>
+	</div>
+
+	<div data-role="page" id="accueil">
+		<div data-role="header" data-theme="b">
+			<h1>Ma maquette</h1>
+		</div>
+		<div data-role="content">
+		<center>voici ma premiere maquette</center>
+        </div>	
+        <div id="logo">
+        <img src="mmi.svg" width=50% >
+        </div>	
+		<a data-role="button" data-icon="bars" data-iconpos="left" href="#menugauche" >en voir plus</a>	
+	
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-theme="b" href="#accueil" data-icon="home" >Accueil</a></li>
+				<li><a data-theme="b" href="#info" data-icon="eye" data-transition = "flip">Info</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+
+	<div data-role="page" id="info">
+		<div data-role="header" data-theme="b">
+			<h1>Ma maquette</h1>
+		</div>
+		<div data-role="content">
+			<p>voici ma deuxieme maquette</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam leo tortor, convallis et pharetra eget, molestie </p>
+		</div>	
+			
+	
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-theme="b" href='#accueil' data-icon="home" data-transition = "flip">Accueil</a></li>
+				<li><a data-theme="b" href='#info' data-icon="eye" >Info</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
